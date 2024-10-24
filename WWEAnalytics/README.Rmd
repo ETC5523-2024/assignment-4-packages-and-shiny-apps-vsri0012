@@ -1,0 +1,94 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# WWEAnalytics
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## Purpose
+
+WWEAnalytics is an R package designed to provide tools for exploring and analyzing WWE Championship reigns data. The package allows users to investigate average reign lengths, identify top wrestlers, and examine historical trends in professional wrestling. It includes both functions for statistical analysis and an interactive Shiny app for a more dynamic exploration of the data.
+
+## Example Usage
+
+Here’s a simple example demonstrating how to use the package:
+
+```{r}
+# Install the package (see instructions below)
+remotes::install_github("vsri0012/WWEAnalytics")
+
+# Load the WWEAnalytics package
+library(WWEAnalytics)
+```
+
+## Installation
+
+You can install the development version of WWEAnalytics like so:
+
+```{r}
+# Install from GitHub using remotes
+remotes::install_github("vsri0012/WWEAnalytics")
+```
+
+Once installed, load the package with:
+
+```{r}
+library(WWEAnalytics)
+library(tidyverse)
+```
+
+# Analyzing WWE Championship Reigns
+
+Here’s how you can use some of the basic functions of the package to analyze the data:
+
+```{r}
+# Load the WWE Championship data
+data("wrestling_data")
+
+# Summary statistics of the reign lengths
+summary(wrestling_data$days)
+```
+
+You can also include visualizations directly within your README using embedded R code chunks.
+
+```{r}
+# Create a plot of average reign lengths over time
+library(ggplot2)
+ggplot(wrestling_data, aes(x = year, y = days)) +
+  geom_point() +
+  geom_smooth(method = "loess") +
+  labs(title = "Average WWE Championship Reign Length Over Time",
+       x = "Year", y = "Reign Length (days)")
+```
+
+## Getting Help
+
+If you encounter any issues or have questions about the WWEAnalytics package, you can:
+
+- Refer to the package documentation by running:
+
+```{r}
+?WWEAnalytics
+```
+
+```{r}
+help(package = "WWEAnalytics")
+```
+
+- Submit issues or feature requests on the GitHub Issues page.
+
+- Contact the package author via email at vsri0012@student.monash.edu.
+
+
+

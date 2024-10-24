@@ -1,0 +1,21 @@
+Package: WWEAnalytics
+Title: Analysis of WWE Championship Reigns Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Varun", "Sridhar", , "vsri0012@student.monash.edu", role = c("aut", "cre"))
+Description: This package provides tools to explore and analyze WWE Championship reigns data. It allows users to investigate average reign lengths, identify top wrestlers, and examine trends across different eras of professional wrestling. The package also includes a Shiny app for interactive data exploration.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Imports: 
+    ggplot2,
+    dplyr,
+    shiny,
+    readr,
+    tidyr,
+    stringr
+
