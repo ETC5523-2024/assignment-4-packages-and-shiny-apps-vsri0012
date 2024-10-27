@@ -1,9 +1,14 @@
-ackage: WWEAnalytics
-Title: Analysis of WWE Championship Reigns Data
+Package: WWEAnalytics
+Title: Comprehensive Analysis of WWE Championship Reigns
 Version: 0.0.0.9000
 Authors@R: 
-    person("Varun", "Sridhar", , "vsri0012@student.monash.edu", role = c("aut", "cre"))
-Description: This package provides tools to explore and analyze WWE Championship reigns data. It allows users to investigate average reign lengths, identify top wrestlers, and examine trends across different eras of professional wrestling. The package also includes a Shiny app for interactive data exploration.
+    person("Varun", "Sridhar", email = "vsri0012@student.monash.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package provides tools for analyzing WWE Championship reign data, 
+             including functions to calculate average reign lengths by wrestler, era, and gender, 
+             as well as filtering capabilities for gender-based analysis. The package aims to 
+             offer insights into historical patterns in WWE title reigns, identifying prominent 
+             wrestlers and eras with the longest championship tenures.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -11,10 +16,12 @@ RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
 LazyData: true
-Imports: 
-    ggplot2,
+Imports:
     dplyr,
-    shiny,
-    readr,
-    tidyr,
-    stringr
+    ggplot2,
+    lubridate,
+    readr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

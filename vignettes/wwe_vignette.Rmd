@@ -1,0 +1,113 @@
+---
+title: "Analyzing WWE Championship Reigns: A Vignette for WWEAnalytics"
+author: "Varun Sridhar"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analyzing WWE Championship Reigns: A Vignette for WWEAnalytics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+fontsize: 10pt
+editor_options:
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 8,  
+  fig.height = 4.5  
+)
+```
+
+```{r setup}
+library(WWEAnalytics)
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(kableExtra)
+```
+
+# Introduction
+
+The `WWEAnalytics` package provides functions to analyze WWE Championship reigns across different historical periods. This vignette will guide you through using key functions in the package to explore patterns in reign lengths and identify trends among WWE wrestlers.
+
+## Loading the Package and Data
+
+Start by loading `WWEAnalytics` and accessing the cleaned dataset, `wrestling_data_clean`, that is included within the package.
+
+```{r}
+# Load the dataset
+data("wrestling_data_clean")
+head(wrestling_data_clean)
+```
+
+## Functions Overview
+
+The `WWEAnalytics` package offers several functions that allow for analyzing reign lengths, categorizing wrestlers, and visualizing historical trends. Here, we’ll explore each function in detail.
+
+### 1. Calculating Average Reign Length by Wrestler
+
+The function `average_reign_length_by_wrestler` calculates the average number of days each wrestler held a championship title.
+
+```{r}
+# Calculate average reign length per wrestler
+average_reign_per_wrestler <- average_reign_length_by_wrestler(wrestling_data_clean)
+head(average_reign_per_wrestler)
+
+```
+
+This output provides insights into wrestlers with the longest reigns, allowing for comparisons across different periods and wrestlers.
+
+### 2. Top Wrestlers by Average Reign Length
+
+To identify wrestlers with the longest average reigns, we use `top_wrestlers_by_reign`. This function ranks the top wrestlers based on the number of days they held a championship on average.
+
+```{r}
+# Display the top 10 wrestlers by reign length
+top_10_wrestlers <- top_wrestlers_by_reign(wrestling_data_clean, n = 10)
+top_10_wrestlers
+
+```
+
+This output shows the top 10 WWE wrestlers by average reign length, highlighting those who have had the most significant influence over the championship.
+
+### 3. Calculating Average Reign Length by Era
+
+To analyze how championship reigns have evolved over different periods, use `average_reign_by_era`. This function calculates the average reign length by era, providing insights into historical trends.
+
+```{r}
+# Calculate average reign length by era
+average_reign_era <- average_reign_length_by_era(wrestling_data_clean)
+average_reign_era
+
+```
+
+The output indicates how reign lengths have changed over time, with distinct trends across historical eras.
+
+## Example Analysis Workflow
+
+Here's a step-by-step guide to using the package functions in a cohesive analysis.
+
+1.  **Calculate the Average Reign Length by Wrestler**: Start by using `average_reign_length_by_wrestler` to understand which wrestlers have the longest reigns.
+
+2.  **Filter Top Wrestlers**: Use `top_wrestlers_by_reign` to focus on the top wrestlers with the longest average reign lengths.
+
+3.  **Examine Historical Trends**: Use `average_reign_by_era` to explore how WWE's approach to championships has evolved.
+
+### Summary and Interpretation
+
+The `WWEAnalytics` package provides tools to assess WWE Championship reigns, explore historical patterns, and identify trends across different eras. By combining static functions with an interactive Shiny app, users gain flexibility in analyzing WWE reign data and drawing meaningful insights.
+
+For more detailed analysis, consider using the Shiny app for a visual and interactive experience.
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+The `WWEAnalytics` package enables comprehensive exploration of WWE Championship data. Whether you’re looking to analyze long-term trends or dive into individual wrestlers’ reigns, the package offers the tools needed for an insightful analysis of WWE’s championship history.
