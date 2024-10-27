@@ -1,5 +1,5 @@
 pkgdown:
-  url: 'https://github.com/ETC5523-2024/assignment-4-packages-and-shiny-apps-vsri0012'
+  url: 'https://vsri0012.github.io/assignment-4-packages-and-shiny-apps/'
   destination: docs
   template:
     package: pkgdown
