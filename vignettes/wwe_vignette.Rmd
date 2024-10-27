@@ -4,9 +4,9 @@ author: "Varun Sridhar"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
+  %\VignetteEncoding{UTF-8}
   %\VignetteIndexEntry{Analyzing WWE Championship Reigns: A Vignette for WWEAnalytics}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 fontsize: 10pt
 editor_options:
   chunk_output_type: console
