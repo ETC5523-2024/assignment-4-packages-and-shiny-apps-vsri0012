@@ -39,7 +39,7 @@ remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-vsri0
 
 Run the Shiny app to interactively explore WWE Championship reign data:
 
-```{r}
+```{r eval=FALSE}
 library(WWEAnalytics)
 launch_shiny_app()
 ```
@@ -48,7 +48,7 @@ launch_shiny_app()
 
 You can use ggplot2 with WWEAnalytics functions to visualize reign lengths across different eras and genders.
 
-```{r}
+```{r eval=FALSE}
 # Example: Comparing Average Reign Length by Era
 library(dplyr)
 library(ggplot2)
