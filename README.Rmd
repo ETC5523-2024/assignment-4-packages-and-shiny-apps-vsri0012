@@ -40,8 +40,7 @@ remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-vsri0
 Run the Shiny app to interactively explore WWE Championship reign data:
 
 ```{r eval=FALSE}
-library(WWEAnalytics)
-launch_shiny_app()
+WWEAnalytics::launch_shiny_app()
 ```
 
 ### 2. Analyzing Championship Reign Lengths with ggplot2
