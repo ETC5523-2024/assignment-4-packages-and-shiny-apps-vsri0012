@@ -18,9 +18,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        install.packages('remotes')
-        remotes::install_deps(dependencies = TRUE)
-        install.packages('tidyverse')
+        Rscript -e "install.packages('remotes')"
+        Rscript -e "remotes::install_deps(dependencies = TRUE)"
+        Rscript -e "install.packages('tidyverse')"
 
     - name: Build pkgdown site
       run: |
