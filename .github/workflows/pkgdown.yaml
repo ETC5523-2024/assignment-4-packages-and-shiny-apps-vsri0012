@@ -21,6 +21,7 @@ jobs:
         Rscript -e "install.packages('remotes')"
         Rscript -e "remotes::install_deps(dependencies = TRUE)"
         Rscript -e "install.packages('tidyverse')"
+      R  script -e "install.packages('pkgdown')" 
 
     - name: Build pkgdown site
       run: |
