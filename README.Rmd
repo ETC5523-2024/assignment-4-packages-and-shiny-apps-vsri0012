@@ -1,12 +1,17 @@
 ---
 output: github_document
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 # WWEAnalytics
 
 ## Overview
 
-**WWEAnalytics** is an R package developed to analyze WWE Championship reign data. It provides users with historical insights into WWE Championship reigns, including the duration of title reigns and comparative analysis across different eras and wrestlers. The package includes easy-to-use functions for exploring reign patterns, interactive data visualizations with ggplot2, and a user-friendly Shiny app for interactive analysis.
+**WWEAnalytics** is an R package developed to analyze WWE Championship reign data.
+It provides users with historical insights into WWE Championship reigns, including the duration of title reigns and comparative analysis across different eras and wrestlers.
+The package includes easy-to-use functions for exploring reign patterns, interactive data visualizations with ggplot2, and a user-friendly Shiny app for interactive analysis.
 
 ## Key Features
 
@@ -69,12 +74,14 @@ ggplot(average_reign, aes(x = era, y = avg_reign_length, fill = era)) +
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
 ## Contributions
 
-Contributions are welcome! Feel free to fork the repository, submit pull requests, or report issues to help improve the package.
+Contributions are welcome!
+Feel free to fork the repository, submit pull requests, or report issues to help improve the package.
 
 ## Documentation
 
-For full documentation and tutorials, visit the pkgdown site here: WWEAnalytics Documentation.
+For full documentation and tutorials, visit the pkgdown site here: [WWEAnalytics Documentation](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-vsri0012/)
