@@ -21,7 +21,7 @@ Imports:
     ggplot2,
     lubridate,
     readr
-URL: 'https://vsri0012.github.io/assignment-4-packages-and-shiny-apps-vsri0012'
+URL: 'URL: 'https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-vsri0012/'
 Suggests: 
     knitr,
     rmarkdown

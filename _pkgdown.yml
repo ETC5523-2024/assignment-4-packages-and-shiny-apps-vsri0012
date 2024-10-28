@@ -1,13 +1,3 @@
-pkgdown:
-  url: 'https://vsri0012.github.io/assignment-4-packages-and-shiny-apps-vsri0012'
-  destination: docs
-  template:
-    package: pkgdown
-    bootstrap: 5
-  navbar:
-    structure:
-      left: [reference, articles]
-      right: [github]
-  home:
-    title: "WWE Championship Reign Analysis"
-    description: "Explore WWE Championship data trends, average reigns, and wrestler dominance across eras."
+url: "https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-vsri0012/"
+template:
+  bootstrap: 5
