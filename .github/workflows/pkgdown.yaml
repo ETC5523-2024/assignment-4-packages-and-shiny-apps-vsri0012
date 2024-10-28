@@ -20,8 +20,14 @@ jobs:
       run: |
         install.packages('remotes')
         remotes::install_deps(dependencies = TRUE)
-        install.packages('tidyverse') # This line installs tidyverse
-        
+        install.packages('tidyverse')
+
     - name: Build pkgdown site
       run: |
-        Rscript -e 'pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)'
+        Rscript -e 'pkgdown::build_site()'
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
